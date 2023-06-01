@@ -14,11 +14,9 @@ class Graph:
         visited = set()
         parent = {v: None for v in self.verts}
 
-        # Check for cycles using depth-first search
         if self.has_cycle(self.verts[0], visited, parent):
             return False
 
-        # Check if all vertices are visited
         if len(visited) != len(self.verts):
             return False
 
